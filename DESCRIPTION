@@ -1,0 +1,20 @@
+Package: retrofit
+Type: Package
+Title: Retrofits a model score to another model
+Version: 0.1.0
+Author: Who wrote it
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: When replacing an old model with a new one it is often desirable to
+  retrofit the new model to the old so that a given score is expected to yield
+  the same result in both models. This package takes a set of predictions and 
+  truth from two models and returns a function that converts the results of 
+  the second model into an equivalent score matching the expected performance
+  of the first model.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    isotone,
+    dplyr,
+    checkmate
+RoxygenNote: 7.1.0
