@@ -27,8 +27,8 @@ retrofit = function(old_pred, old_truth, new_pred, new_truth, method = 'gpava') 
   new = data.frame(pred = new_pred, truth = new_truth)
   new = dplyr::arrange(new, new_pred)
 
-  old_gpava = gpava(z = old$pred, y = old$truth)
-  new_gpava = gpava(z = new$pred, y = new$truth)
+  old_gpava = isotone::gpava(z = old$pred, y = old$truth)
+  new_gpava = isotone::gpava(z = new$pred, y = new$truth)
 
   result = list(
     data = data.frame(old_pred, old_truth, new_pred, new_truth),
